@@ -1,0 +1,59 @@
+header{
+    height: 110px;
+    background: #4170c7;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    img{
+        height: 100px;
+    }
+}
+.containerGlobal {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.containerBuscador {
+    input{
+        height: 40px;
+        font-size: 20px;
+    }
+    button{
+        font-size: 20px;
+        background: #565eea;
+        color: #fff;
+padding: 10px;
+border-radius: 23px;
+border-color: #565eea;
+}
+}
+
+.name-pokemon {
+    margin-top: 30px;
+    font-size: 30px !important;
+}
+
+.container-Image {
+    h2{
+        text-transform: uppercase;
+    }
+    img{
+        height: 100%;
+    }
+}
+
+.container-acordion {
+    width: 100%;
+    h1{
+        padding-top: 25px;
+    }
+}
+
+.container-pokedex {
+    width: 100%;
+    margin-top: 50px;
+}

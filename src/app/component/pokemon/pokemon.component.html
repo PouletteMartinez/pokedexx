@@ -1,0 +1,48 @@
+<header>
+    <img src="../../../assets/image/pokeball.png" alt="">
+    <h1>MI POKEDEX</h1>
+
+</header>
+<div class="containerGlobal"></div>
+<div class="pokemon-Search">
+<div class="containerBuscador">
+    <p>Busca un POKÉMON</p>
+    <input type="text" placeholder="Ingresa el ID / Nombre" [(ngModel)]="searchQuery">
+    <button (click)="searchPokemon()">BUSCAR</button>
+</div>
+
+
+<div *ngIf="pokemonData" class="container-Image">
+    <div class="name-pokemon">
+        <h2>{{pokemonData.name}} </h2>
+    </div>
+    <h3>ID: {{pokemonData.id}}</h3>
+    <img [src]="pokemonData.sprites.front_default" alt="{{pokemonData.name}}">
+    <p> Tipo: {{ pokemonData.types[0].type.name.toUpperCase()}} </p>
+</div>
+
+<div *ngIf="error">
+    <p>{{error}}</p>
+</div>
+
+<mat-accordion class="container-acordion">
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h1>VER MÁS</h1>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <h3>Peso: {{pokemonData.weight}} kg</h3>
+        <h3>Altura: {{pokemonData.height}}</h3>
+        <h2>Habilidades</h2>
+        <h3> {{ pokemonData.abilities[0].ability.name.toUpperCase()}}</h3>
+        <h3> {{ pokemonData.abilities[1].ability.name.toUpperCase()}}</h3>
+    </mat-expansion-panel>
+</mat-accordion>
+</div>
+
+<div class="container-pokedex">
+
+<!-- <h1>MI POKEDEX</h1> -->
+
+</div>
